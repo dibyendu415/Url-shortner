@@ -19,13 +19,13 @@ app.post('/shorturls',async (req,res)=>{
    res.redirect('/')
 })
 
-app.get('/:shorturl',async (req,res)=>{
-    const shorturl = await shorturl.findOne({ short:req.params.shorturl })
-    if (shorturl == null) return res.sendStatus(404)
-shorturl.clicks++
-shorturl.save()
+app.get('/:Shorturl',async (req,res)=>{
+    const Shorturl = await shorturl.findOne({ short:req.params.Shorturl })
+    if (Shorturl == null) return res.sendStatus(404)
+Shorturl.clicks++
+Shorturl.save()
 
-res.redirect(shorturl.full)
+res.redirect(Shorturl.full)
 
 })
 
