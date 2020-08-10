@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/urlshortner',{
     useNewUrlParser:true,useUnifiedTopology:true
 })
 
-app.set('views engine','ejs')
+app.set('view engine','ejs')
 app.use(express.urlencoded({extended:false}))
 
 app.get('/',async (req,res)=>{
