@@ -29,7 +29,7 @@
             <% shorturls.forEach(shorturl => { %>
             <tr>
                 <td><a href="<%= shorturl.full %>"><%= shorturl.full %></a></td>
-                <td><a href="<%= shorturl.short %>"><%= shorturl.short %></a></td>
+                <td style="min-width: 200px;"><a href="<%= shorturl.short %>"><%= shorturl.short %></a></td>
                 <td><%= shorturl.clicks %></td>
             </tr>
             <%}) %>
@@ -37,6 +37,9 @@
     </table>
 </div>
 
+<footer style="position: absolute; width: 100%; bottom: 5px;" class="bg-dark text-center text-light">
+    <h3>Made by Dibyendu Maji</h3>
+</footer>
 
     <!-- JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
